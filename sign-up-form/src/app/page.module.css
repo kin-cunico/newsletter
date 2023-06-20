@@ -16,19 +16,17 @@
 	flex-wrap: wrap;
 	align-items: center;
 	background: white;
-	justify-content: space-evenly;
-	padding: 80px;
+	justify-content: center;
 	border-radius: 10px;
+	overflow: hidden;
 }
 
 .image {
-	box-sizing: content-box;
+	box-sizing: border-box;
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	overflow: hidden;
 	position: relative;
-	height: 100%;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 }
@@ -37,10 +35,8 @@
 	display: flex;
 	align-items: left;
 	flex-direction: column;
-
 	width: 100%;
 	gap: 20px;
-	top: 150px;
 	padding: 20px 20px 0px 20px;
 	font-size: 0.9rem;
 }
@@ -62,7 +58,7 @@
 .subscribe {
 	display: flex;
 	flex-direction: column;
-	align-items: left;
+	align-items: center;
 	gap: 10px;
 }
 
@@ -78,6 +74,9 @@
 	padding-left: 30px;
 	border-radius: 10px;
 	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: hsl(231, 7%, 60%);
 	outline-color: hsl(231, 7%, 60%);
 }
@@ -88,4 +87,8 @@
 	background: hsl(234, 29%, 20%);
 	border-radius: 10px;
 	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -7,25 +7,17 @@ import icon from "public/images/icon-list.svg";
 import { useState } from "react";
 
 export default function Home() {
-	let imageAd = document.querySelector("#image");
 	const [state, setState] = useState(false);
-	const imageChanger = () => {
+
+	function handleSubmit() {
+		setState(true);
+		state === true ? alert("Subscribed") : null;
 		setState(!state);
-	};
-	function windowSize() {
-		let windowWidth = window.innerWidth || "";
-		if (windowWidth > 1024) {
-			let getImage = document.div.div.image;
-			imageAd = getImage;
-			console.log(imageAd);
-		}
+		return console.log(state);
 	}
 
 	return (
-		<main
-			className={styles.main}
-			onResize={windowSize}
-		>
+		<main className={styles.main}>
 			<div className={styles.container}>
 				<div>
 					<div className={styles.body}>
@@ -64,15 +56,27 @@ export default function Home() {
 							type="email"
 							placeholder="email@company.com"
 						></input>
-						<button type="submit">Subscribe to monthly newsletter</button>
+						<button
+							type="submit"
+							onClick={handleSubmit}
+						>
+							Subscribe to monthly newsletter
+						</button>
 					</div>
 				</div>
 				<div className={styles.image}>
-					<Image
-						src={image}
-						alt="image illustration a tablet, graphics, and a web browser"
-						id="image"
-					/>
+					<picture>
+						<source
+							srcSet={image}
+							media="(min-width: 600px)"
+						/>
+						<Image
+							src={imagePhone}
+							media="(max-width: 599px)"
+							alt="image illustration a tablet, graphics, and a web browser"
+							id="image"
+						/>
+					</picture>
 				</div>
 			</div>
 		</main>
